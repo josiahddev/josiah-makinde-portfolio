@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Josiah Makinde — Portfolio
 
-## Getting Started
+**Live site:** [josiah-makinde-portfolio.vercel.app](https://josiah-makinde-portfolio.vercel.app)
 
-First, run the development server:
+Personal portfolio for an IT support and ICT professional in Kaduna, Nigeria, working toward cybersecurity. It covers hands-on IT experience, networking labs, a group vulnerability assessment, small PowerShell tools, UI/UX case studies and the certificates behind them.
+
+## What's on the site
+
+- **Experience** — IT support roles from 2021 to today, as a timeline
+- **Projects** — a lab-based vulnerability assessment (Kioptrix and Metasploitable 2), a Windows system health checker in PowerShell, and a log of Cisco Packet Tracer labs
+- **Design** — six UI/UX case studies designed in Figma
+- **Learning** — current focus across networking, systems and security, plus Cisco badges verifiable on Credly
+- **Contact** — email, LinkedIn, GitHub and a downloadable CV
+
+Everything shown is real. Where something is still in progress it says so, and anything not yet available shows "coming soon" rather than filler.
+
+## Built with
+
+- [Next.js](https://nextjs.org) (App Router) and TypeScript
+- [Tailwind CSS](https://tailwindcss.com) v4
+- [Motion](https://motion.dev) for restrained animations, with `prefers-reduced-motion` respected
+- Deployed on [Vercel](https://vercel.com), with Web Analytics and Speed Insights
+
+It's built mobile-first, keyboard-accessible and SEO-ready (metadata, Open Graph image, structured data, sitemap).
+
+## Run it locally
+
+Requires Node.js 20.9 or newer.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The content lives in two files, so updating the site rarely means touching components:
 
-## Learn More
+- `lib/data.ts` — profile, experience, skills, projects, labs, certificates and contact links
+- `lib/design.ts` — the UI/UX case studies (images live in `public/design/`)
 
-To learn more about Next.js, take a look at the following resources:
+Every push to `master` redeploys the live site automatically.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- GitHub: [@josiahddev](https://github.com/josiahddev)
+- LinkedIn: [josiah-makinde](https://www.linkedin.com/in/josiah-makinde-2a55011b7)
+- Badges: [Credly](https://www.credly.com/users/ifeoluwa-makinde.c08160c9)
