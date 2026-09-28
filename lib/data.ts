@@ -6,8 +6,8 @@
  */
 
 export const site = {
-  // TODO: replace with the real domain once deployed (used for canonical + OG URLs).
-  url: "https://josiah-makinde.vercel.app",
+  // Live address — used for the canonical URL, Open Graph, JSON-LD, robots and sitemap.
+  url: "https://josiah-makinde-portfolio.vercel.app",
   name: "Josiah Makinde",
   fullName: "Makinde Ifeoluwa Josiah",
   title: "Josiah Makinde — IT Support & Cybersecurity",
