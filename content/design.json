@@ -1,0 +1,396 @@
+{
+  "label": "Design",
+  "title": "I also design *interfaces*.",
+  "lede": "Six UI/UX case studies, designed solo in Figma in 2024 — concept work, not client projects. Supporting users all day makes you care a lot about screens that don't confuse people.",
+  "behance": "",
+  "behanceLabel": "Behance ↗",
+  "behancePending": "Behance link coming soon",
+  "labels": {
+    "open": "Open case study",
+    "next": "Next case study",
+    "close": "Close",
+    "caseStudy": "case study",
+    "decisions": "Key design decisions",
+    "role": "Role",
+    "type": "Type",
+    "tools": "Tools",
+    "year": "Year",
+    "challenge": "Challenge",
+    "approach": "Approach",
+    "outcome": "Outcome"
+  },
+  "items": [
+    {
+      "title": "Joxich Hotel",
+      "category": "Hotel booking website",
+      "tagline": "Plan. Book. Travel. From “where to?” to “reserved” in four screens.",
+      "role": "UI/UX Designer (solo)",
+      "type": "Web design · Concept",
+      "tools": "Figma",
+      "year": "2024",
+      "challenge": "Booking a hotel online often means juggling cluttered listings, hidden fees and endless tabs. The goal was a booking flow that feels calm and trustworthy — search, compare and reserve without surprises.",
+      "approach": "Started with low-fidelity wireframes to map the core journey — search, results, hotel details and sign-in — then built a reusable component library (navbar, date picker, location menu, hotel cards, FAQ accordion) before moving to high-fidelity screens.",
+      "outcome": "A four-page, responsive-ready desktop flow with transparent pricing (nightly rate, taxes and total before you reserve), ratings and reviews at a glance, and similar-property suggestions.",
+      "decisions": [
+        {
+          "title": "Search first",
+          "detail": "Location and date search sit on the hero, so the first action is the most important one."
+        },
+        {
+          "title": "Honest pricing",
+          "detail": "Nightly price, discount, taxes and final total broken down before reservation."
+        },
+        {
+          "title": "Social proof",
+          "detail": "Rating summary with distribution bars and recent reviews build trust fast."
+        }
+      ],
+      "cover": "/design/joxich-hotel/cover.webp",
+      "slides": [
+        {
+          "image": "/design/joxich-hotel/01-intro.webp",
+          "caption": "Intro",
+          "width": 1600,
+          "height": 1321
+        },
+        {
+          "image": "/design/joxich-hotel/03-wireframes.webp",
+          "caption": "Low-fidelity wireframes",
+          "width": 1600,
+          "height": 1113
+        },
+        {
+          "image": "/design/joxich-hotel/04-style-guide.webp",
+          "caption": "Style guide",
+          "width": 1600,
+          "height": 1079
+        },
+        {
+          "image": "/design/joxich-hotel/05-homepage.webp",
+          "caption": "Homepage",
+          "width": 1600,
+          "height": 3091
+        },
+        {
+          "image": "/design/joxich-hotel/06-search-results.webp",
+          "caption": "Search results",
+          "width": 1600,
+          "height": 2139
+        },
+        {
+          "image": "/design/joxich-hotel/07-hotel-details-booking.webp",
+          "caption": "Hotel details & booking",
+          "width": 1600,
+          "height": 3809
+        },
+        {
+          "image": "/design/joxich-hotel/08-login-sign-up.webp",
+          "caption": "Login & sign-up",
+          "width": 1600,
+          "height": 1335
+        },
+        {
+          "image": "/design/joxich-hotel/09-details.webp",
+          "caption": "Details",
+          "width": 1600,
+          "height": 1493
+        }
+      ]
+    },
+    {
+      "title": "CryptoMoney",
+      "category": "Crypto investing landing page",
+      "tagline": "One place to invest in crypto and manage your money — designed to make crypto feel approachable.",
+      "role": "UI/UX Designer (solo)",
+      "type": "Web design · Concept",
+      "tools": "Figma",
+      "year": "2024",
+      "challenge": "Crypto products tend to feel intimidating — dense charts, jargon, dark aggressive visuals. CryptoMoney needed to earn the trust of first-time investors while still feeling modern.",
+      "approach": "A soft, muted lavender palette, friendly illustrations and short plain-language copy. Each benefit (invest, plan, manage) gets its own illustrated block, followed by three-step onboarding and app download calls to action.",
+      "outcome": "A calm landing page with a signature card system — gradient debit cards that make the product tangible — plus a clear “how to get started” path and a news section.",
+      "decisions": [
+        {
+          "title": "Tangible product",
+          "detail": "Gradient card designs show users what they actually get."
+        },
+        {
+          "title": "3-step onboarding",
+          "detail": "Create account → verify → start investing, explained up front."
+        },
+        {
+          "title": "Plain language",
+          "detail": "Short, benefit-led copy instead of trading jargon."
+        }
+      ],
+      "cover": "/design/cryptomoney/cover.webp",
+      "slides": [
+        {
+          "image": "/design/cryptomoney/01-intro.webp",
+          "caption": "Intro",
+          "width": 1600,
+          "height": 1321
+        },
+        {
+          "image": "/design/cryptomoney/03-style-guide.webp",
+          "caption": "Style guide",
+          "width": 1600,
+          "height": 1098
+        },
+        {
+          "image": "/design/cryptomoney/04-hero.webp",
+          "caption": "Hero",
+          "width": 1600,
+          "height": 1229
+        },
+        {
+          "image": "/design/cryptomoney/05-card-system.webp",
+          "caption": "Card system",
+          "width": 1600,
+          "height": 1287
+        },
+        {
+          "image": "/design/cryptomoney/06-why-cryptomoney.webp",
+          "caption": "Why CryptoMoney",
+          "width": 1600,
+          "height": 2026
+        },
+        {
+          "image": "/design/cryptomoney/07-onboarding-news-download.webp",
+          "caption": "Onboarding, news & download",
+          "width": 1600,
+          "height": 2490
+        }
+      ]
+    },
+    {
+      "title": "JoxichClass",
+      "category": "Edtech website — hobby classes for kids",
+      "tagline": "Live hobby classes for kids, taught by creative mentors.",
+      "role": "UI/UX Designer (solo)",
+      "type": "Web design · Concept",
+      "tools": "Figma",
+      "year": "2024",
+      "challenge": "Parents want creative, trustworthy extracurricular learning for their kids — but hobby classes online are scattered and hard to compare. The site had to reassure parents while showing the fun of the classes.",
+      "approach": "A clean navy-and-white system for credibility, paired with colourful hands-on class photography for energy. Classes and mentors are browsable in carousels with quick filters (All, Most Popular, Trending, Just Added).",
+      "outcome": "A friendly landing page that moves parents from discovery to sign-up: email capture in the hero, class and mentor carousels, and a clear “why learn with us” section.",
+      "decisions": [
+        {
+          "title": "Email-first hero",
+          "detail": "Sign-up is available from the very first screen."
+        },
+        {
+          "title": "Filterable carousels",
+          "detail": "Classes and mentors browsable by popularity or recency."
+        },
+        {
+          "title": "Mentor credibility",
+          "detail": "Real faces and specialisms build parent trust."
+        }
+      ],
+      "cover": "/design/joxichclass/cover.webp",
+      "slides": [
+        {
+          "image": "/design/joxichclass/01-intro.webp",
+          "caption": "Intro",
+          "width": 1600,
+          "height": 1321
+        },
+        {
+          "image": "/design/joxichclass/03-style-guide.webp",
+          "caption": "Style guide",
+          "width": 1600,
+          "height": 1094
+        },
+        {
+          "image": "/design/joxichclass/04-full-landing-page.webp",
+          "caption": "Full landing page",
+          "width": 1600,
+          "height": 3905
+        },
+        {
+          "image": "/design/joxichclass/05-live-classes.webp",
+          "caption": "Live classes",
+          "width": 1600,
+          "height": 1229
+        },
+        {
+          "image": "/design/joxichclass/06-top-mentors.webp",
+          "caption": "Top mentors",
+          "width": 1600,
+          "height": 1229
+        }
+      ]
+    },
+    {
+      "title": "Discover Mountain",
+      "category": "Travel agency website",
+      "tagline": "Explore the world — a travel site built around inspiration, activities and destinations.",
+      "role": "UI/UX Designer (solo)",
+      "type": "Web design · Concept",
+      "tools": "Figma",
+      "year": "2024",
+      "challenge": "Travel sites often lead with forms and prices. Discover Mountain needed to inspire first — make visitors want to go somewhere — and then make it easy to find the right trip.",
+      "approach": "Full-bleed landscape photography and a deep teal palette for a calm, adventurous mood. A search bar on the hero, then an interactive activities list, a quote, testimonials and a masonry gallery of destinations.",
+      "outcome": "An immersive single-page experience that balances inspiration and action, closing with a newsletter sign-up.",
+      "decisions": [
+        {
+          "title": "Search on the hero",
+          "detail": "Destinations and things to do are one search away."
+        },
+        {
+          "title": "Activity explorer",
+          "detail": "Walking, cycling, trekking, rafting and yoga — each with its own preview."
+        },
+        {
+          "title": "Destination gallery",
+          "detail": "A masonry grid that sells the dream visually."
+        }
+      ],
+      "cover": "/design/discover-mountain/cover.webp",
+      "slides": [
+        {
+          "image": "/design/discover-mountain/01-intro.webp",
+          "caption": "Intro",
+          "width": 1600,
+          "height": 1321
+        },
+        {
+          "image": "/design/discover-mountain/03-style-guide.webp",
+          "caption": "Style guide",
+          "width": 1600,
+          "height": 1078
+        },
+        {
+          "image": "/design/discover-mountain/04-full-landing-page.webp",
+          "caption": "Full landing page",
+          "width": 1600,
+          "height": 5169
+        },
+        {
+          "image": "/design/discover-mountain/05-activities-we-offer.webp",
+          "caption": "Activities",
+          "width": 1600,
+          "height": 1335
+        },
+        {
+          "image": "/design/discover-mountain/06-luxury-destinations.webp",
+          "caption": "Destinations",
+          "width": 1600,
+          "height": 2000
+        }
+      ]
+    },
+    {
+      "title": "ProYoga Buddy",
+      "category": "Yoga classes website",
+      "tagline": "Ancient yoga practices, made easy to start.",
+      "role": "UI/UX Designer (solo)",
+      "type": "Web design · Concept",
+      "tools": "Figma",
+      "year": "2024",
+      "challenge": "Beginners often feel yoga isn't “for them”. ProYoga Buddy needed to feel calm and welcoming, explain its value quickly, and make choosing a membership simple.",
+      "approach": "A serif/sans pairing (Lora + Raleway) and a soft periwinkle accent for a calm, editorial tone. Three pages — Home, Courses and About — built from a shared component set: buttons, email input and membership cards.",
+      "outcome": "A serene three-page site with a clear path to joining: moody hero imagery, benefit tiles, straightforward pricing and a newsletter capture on every page.",
+      "decisions": [
+        {
+          "title": "Calm visual tone",
+          "detail": "Serif headings and muted imagery set a mindful mood."
+        },
+        {
+          "title": "Simple pricing",
+          "detail": "Two plans, three benefits each — easy to compare."
+        },
+        {
+          "title": "Consistent system",
+          "detail": "Shared components across Home, Courses and About."
+        }
+      ],
+      "cover": "/design/proyoga-buddy/cover.webp",
+      "slides": [
+        {
+          "image": "/design/proyoga-buddy/01-intro.webp",
+          "caption": "Intro",
+          "width": 1600,
+          "height": 1321
+        },
+        {
+          "image": "/design/proyoga-buddy/03-style-guide.webp",
+          "caption": "Style guide",
+          "width": 1600,
+          "height": 1445
+        },
+        {
+          "image": "/design/proyoga-buddy/04-homepage.webp",
+          "caption": "Homepage",
+          "width": 1600,
+          "height": 3306
+        },
+        {
+          "image": "/design/proyoga-buddy/05-courses-about.webp",
+          "caption": "Courses & About",
+          "width": 1600,
+          "height": 1223
+        },
+        {
+          "image": "/design/proyoga-buddy/06-membership-plans.webp",
+          "caption": "Membership plans",
+          "width": 1600,
+          "height": 1229
+        }
+      ]
+    },
+    {
+      "title": "Personal Portfolio",
+      "category": "Designer portfolio website",
+      "tagline": "A minimal, monochrome portfolio that lets the work do the talking.",
+      "role": "UI/UX Designer (solo)",
+      "type": "Web design · Personal",
+      "tools": "Figma",
+      "year": "2024",
+      "challenge": "A designer's portfolio has one job: get the work seen and make it easy to get in touch. Anything decorative competes with the projects.",
+      "approach": "A monochrome palette and Work Sans keep the frame neutral. Four sections — About, Work, Blog and Contact — each fit in a single screen, with vertical section labels for quick orientation.",
+      "outcome": "A focused one-page portfolio with project cards (tags and live links), a blog, a downloadable CV and a simple contact form.",
+      "decisions": [
+        {
+          "title": "Neutral frame",
+          "detail": "Greys only, so project visuals stand out."
+        },
+        {
+          "title": "One screen per section",
+          "detail": "About, Work, Blog, Contact — no scroll fatigue."
+        },
+        {
+          "title": "Clear actions",
+          "detail": "Download CV, view live projects, send a message."
+        }
+      ],
+      "cover": "/design/personal-portfolio/cover.webp",
+      "slides": [
+        {
+          "image": "/design/personal-portfolio/01-intro.webp",
+          "caption": "Intro",
+          "width": 1600,
+          "height": 1321
+        },
+        {
+          "image": "/design/personal-portfolio/03-style-guide.webp",
+          "caption": "Style guide",
+          "width": 1600,
+          "height": 1077
+        },
+        {
+          "image": "/design/personal-portfolio/04-four-sections.webp",
+          "caption": "Four sections",
+          "width": 1600,
+          "height": 1342
+        },
+        {
+          "image": "/design/personal-portfolio/05-work.webp",
+          "caption": "Work",
+          "width": 1600,
+          "height": 1229
+        }
+      ]
+    }
+  ]
+}

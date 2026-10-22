@@ -2,24 +2,12 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useState } from "react";
+import { hero } from "@/lib/content";
 
-type Line = { kind: "cmd" | "out" | "gap"; text: string; tone?: "accent" };
+type Line = (typeof hero.console.lines)[number];
 
-const script: Line[] = [
-  { kind: "cmd", text: "whoami" },
-  { kind: "out", text: "josiah — IT support / ICT" },
-  { kind: "gap", text: "" },
-  { kind: "cmd", text: "cat ./focus" },
-  { kind: "out", text: "windows      users & endpoints" },
-  { kind: "out", text: "networking   ip · dhcp · lan/wan" },
-  { kind: "out", text: "scripting    powershell · python" },
-  { kind: "out", text: "security     fundamentals → siem", tone: "accent" },
-  { kind: "gap", text: "" },
-  { kind: "cmd", text: "status" },
-  { kind: "out", text: "learning + building", tone: "accent" },
-];
-
-const PROMPT = "josiah@kaduna:~$";
+const script: readonly Line[] = hero.console.lines;
+const PROMPT = hero.console.prompt;
 
 /**
  * A quiet, typed-out summary card. It plays once, then rests: no looping,
@@ -29,7 +17,7 @@ export function Console() {
   const reduce = useReducedMotion();
   const [shown, setShown] = useState(0); // lines fully visible
   const [typed, setTyped] = useState(0); // characters typed into the current command
-  const done = !!reduce || shown >= script.length;
+  const done = !!reduce || shown >= script.length || script.length === 0;
 
   useEffect(() => {
     if (done) return;
@@ -69,14 +57,11 @@ export function Console() {
           <span className="size-2 rounded-full bg-line-strong" />
           <span className="size-2 rounded-full bg-line-strong" />
         </span>
-        <span>pwsh</span>
+        <span>{hero.console.windowTitle}</span>
       </div>
 
       {/* Screen readers get the whole summary at once, not a character stream. */}
-      <figcaption className="sr-only">
-        Terminal summary: Josiah works in IT support and ICT. Focus areas are Windows, networking, scripting and
-        security fundamentals. Status: learning and building.
-      </figcaption>
+      <figcaption className="sr-only">{hero.console.summary}</figcaption>
 
       <div aria-hidden="true" className="min-h-[19.5rem] overflow-x-auto px-4 py-4 sm:px-5">
         {script.slice(0, visible).map((line, i) => (
@@ -101,7 +86,7 @@ function ConsoleLine({ line }: { line: Line }) {
         <span className="text-fg">{line.text}</span>
       </div>
     );
-  return <div className={`whitespace-pre ${line.tone === "accent" ? "text-accent" : "text-muted"}`}>{line.text}</div>;
+  return <div className={`whitespace-pre ${line.accent ? "text-accent" : "text-muted"}`}>{line.text}</div>;
 }
 
 function Caret() {

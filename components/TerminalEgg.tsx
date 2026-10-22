@@ -2,15 +2,10 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import { site } from "@/lib/content";
 
-const lines = [
-  { t: "$ whoami", c: "text-fg" },
-  { t: "josiah", c: "text-muted" },
-  { t: "$ status", c: "text-fg" },
-  { t: "learning...", c: "text-muted" },
-  { t: "building...", c: "text-muted" },
-  { t: "debugging...", c: "text-accent" },
-];
+const toneClass = { command: "text-fg", output: "text-muted", accent: "text-accent" } as const;
+const lines = site.footer.terminal.map((l) => ({ t: l.text, c: toneClass[l.tone] }));
 
 /** A tiny optional aside in the footer. Easy to miss, easy to ignore. */
 export function TerminalEgg() {
@@ -40,7 +35,7 @@ export function TerminalEgg() {
           >
             {lines.map((l, i) => (
               <motion.span
-                key={l.t}
+                key={i}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.12 * i }}

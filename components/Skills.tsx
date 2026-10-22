@@ -2,7 +2,11 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import { skillGroups, skillLevelLabel, type SkillGroup, type SkillLevel } from "@/lib/data";
+import { skills, type SkillGroup, type SkillLevel } from "@/lib/content";
+import { Emphasis } from "./ui/Emphasis";
+
+const skillGroups = skills.groups;
+const skillLevelLabel = skills.levels;
 
 /** Shape + text carry the level, so it never depends on colour alone. */
 function LevelMark({ level }: { level: SkillLevel }) {
@@ -34,18 +38,15 @@ export function Skills() {
             <p className="flex items-center gap-3 font-mono text-xs tracking-wider text-faint uppercase">
               <span className="text-accent">04</span>
               <span aria-hidden="true" className="h-px w-8 bg-line-strong" />
-              Skills
+              {skills.label}
             </p>
             <h2
               id="skills-title"
               className="mt-5 font-display text-[clamp(1.875rem,4.2vw,2.75rem)] leading-[1.08] font-semibold tracking-[-0.025em] text-balance"
             >
-              Labelled honestly.
+              <Emphasis text={skills.title} />
             </h2>
-            <p className="mt-4 max-w-sm text-pretty text-muted">
-              No percentage bars. Each group says whether I use it at work, know it well enough to get by, or am
-              still learning it.
-            </p>
+            {skills.lede && <p className="mt-4 max-w-sm text-pretty text-muted">{skills.lede}</p>}
 
             <ul className="mt-8 space-y-2.5 font-mono text-xs text-muted">
               {(Object.keys(skillLevelLabel) as SkillLevel[]).map((l) => (
@@ -65,12 +66,12 @@ export function Skills() {
               onClick={() => setOpen(allOpen ? new Set() : new Set(skillGroups.map((_, i) => i)))}
               className="min-h-11 font-mono text-xs text-faint transition-colors hover:text-fg"
             >
-              {allOpen ? "[ collapse all ]" : "[ expand all ]"}
+              {allOpen ? skills.collapseAll : skills.expandAll}
             </button>
           </div>
           <ul className="border-t border-line">
             {skillGroups.map((g, i) => (
-              <SkillGroupRow key={g.name} group={g} index={i} isOpen={open.has(i)} onToggle={() => toggle(i)} />
+              <SkillGroupRow key={i} group={g} index={i} isOpen={open.has(i)} onToggle={() => toggle(i)} />
             ))}
           </ul>
         </div>
@@ -137,7 +138,7 @@ function SkillGroupRow({
               </p>
               <ul className="flex flex-wrap gap-x-1 gap-y-2 text-[0.9375rem] text-fg">
                 {group.items.map((s, i) => (
-                  <li key={s}>
+                  <li key={i}>
                     {s}
                     {i < group.items.length - 1 && (
                       <span aria-hidden="true" className="px-2 text-line-strong">

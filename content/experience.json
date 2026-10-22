@@ -1,0 +1,86 @@
+{
+  "label": "Experience",
+  "title": "Keeping other people's computers working, since 2021.",
+  "lede": "Most recent first. Every role here has been hands-on support — the people, the machines and the network between them.",
+  "kindLabels": {
+    "work": "Work",
+    "education": "Education",
+    "now": "Current"
+  },
+  "entries": [
+    {
+      "period": "Now",
+      "role": "Building deeper skills",
+      "org": "Self-directed",
+      "place": "Alongside work",
+      "kind": "now",
+      "note": "",
+      "points": []
+    },
+    {
+      "period": "2024 — Present",
+      "role": "ICT Manager",
+      "org": "Chris Makinde & Co Chartered Accountants",
+      "place": "Kaduna",
+      "kind": "work",
+      "note": "IT support & operations for the whole office",
+      "points": [
+        "Run day-to-day IT: systems, network, user accounts and the IT asset inventory.",
+        "Maintain backup routines, security controls and who-has-access-to-what.",
+        "Install, configure and maintain hardware and software — and keep machines healthy so problems don't start.",
+        "First-line and escalated support for every member of staff.",
+        "Work with management to line IT priorities up with what the firm actually needs."
+      ]
+    },
+    {
+      "period": "2023",
+      "role": "IT Support",
+      "org": "Armed Forces Command and Staff College (AFCSC)",
+      "place": "Jaji, Kaduna",
+      "kind": "work",
+      "note": "NYSC — Place of Primary Assignment",
+      "points": [
+        "First-level support for staff: desktops, laptops and office equipment.",
+        "Regular system backups; coordinated hardware and software updates.",
+        "Configured devices and helped keep daily IT running smoothly.",
+        "Escalated complex incidents to senior IT and documented the fixes for next time."
+      ]
+    },
+    {
+      "period": "2022",
+      "role": "B.Sc. Computer Science",
+      "org": "Mountain Top University",
+      "place": "Ogun State",
+      "kind": "education",
+      "note": "",
+      "points": []
+    },
+    {
+      "period": "May — Oct 2021",
+      "role": "IT Support Intern",
+      "org": "Peugeot Automobile Nigeria",
+      "place": "Pan Drive, Kakuri, Kaduna",
+      "kind": "work",
+      "note": "",
+      "points": [
+        "User support for Microsoft Office, Windows PCs, printers and peripherals.",
+        "Helped plan and coordinate data migrations from Windows Server, plus system and software upgrades.",
+        "Remote and phone helpdesk support.",
+        "Hardware, software and network troubleshooting, including antivirus and firewall configuration.",
+        "Tested new hardware and software before it went out to users."
+      ]
+    }
+  ],
+  "nowBuilding": [
+    "Networking",
+    "Linux",
+    "Windows administration",
+    "Active Directory",
+    "Microsoft 365",
+    "Entra ID",
+    "Cybersecurity",
+    "SIEM",
+    "Vulnerability management",
+    "Scripting"
+  ]
+}

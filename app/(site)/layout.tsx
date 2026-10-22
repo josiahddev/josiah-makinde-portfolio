@@ -3,8 +3,8 @@ import { Instrument_Serif, JetBrains_Mono, Schibsted_Grotesk } from "next/font/g
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { MotionProvider } from "@/components/MotionProvider";
-import { contact, site } from "@/lib/data";
-import "./globals.css";
+import { about, contact, site, siteUrl } from "@/lib/content";
+import "../globals.css";
 
 const body = Schibsted_Grotesk({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 const serif = Instrument_Serif({
@@ -17,11 +17,11 @@ const serif = Instrument_Serif({
 const code = JetBrains_Mono({ subsets: ["latin"], variable: "--font-code", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL(siteUrl),
   title: site.title,
   description: site.description,
   applicationName: site.name,
-  authors: [{ name: site.name, url: contact.linkedin }],
+  authors: [{ name: site.name, url: contact.linkedin || undefined }],
   alternates: { canonical: "/" },
   openGraph: {
     type: "profile",
@@ -44,18 +44,19 @@ export const viewport: Viewport = {
   colorScheme: "dark",
 };
 
+// Built from admin content; empty fields are simply left out.
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: site.fullName,
+  name: site.fullName || site.name,
   alternateName: site.name,
-  jobTitle: "ICT Manager",
-  worksFor: { "@type": "Organization", name: "Chris Makinde & Co Chartered Accountants" },
-  alumniOf: { "@type": "CollegeOrUniversity", name: "Mountain Top University" },
-  address: { "@type": "PostalAddress", addressLocality: "Kaduna", addressCountry: "NG" },
-  url: site.url,
-  image: `${site.url}/josiah.webp`,
-  sameAs: [contact.linkedin, contact.github, contact.credly],
+  ...(site.jobTitle && { jobTitle: site.jobTitle }),
+  ...(site.worksFor && { worksFor: { "@type": "Organization", name: site.worksFor } }),
+  ...(site.alumniOf && { alumniOf: { "@type": "CollegeOrUniversity", name: site.alumniOf } }),
+  ...(site.location && { address: { "@type": "PostalAddress", addressLocality: site.location } }),
+  url: siteUrl,
+  ...(about.photo && { image: new URL(about.photo, siteUrl).toString() }),
+  sameAs: [contact.linkedin, contact.github, contact.credly].filter(Boolean),
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

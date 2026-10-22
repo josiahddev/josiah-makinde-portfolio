@@ -1,0 +1,49 @@
+{
+  "show": true,
+  "kicker": "Lab log",
+  "title": "Networking labs in Cisco Packet Tracer",
+  "text": "Graded activities I completed in Cisco’s Networking Essentials 2.0 course — deploying and cabling devices, configuring end devices, building a simple network, and setting up DHCP and FTP.",
+  "footnote": "topology screenshots coming soon",
+  "windowTitle": "packet-tracer / networking-essentials-2.0",
+  "dateRange": "Jun — Jul 2024",
+  "doneTag": "[done]",
+  "countLabel": "completed",
+  "items": [
+    {
+      "id": "3.3.3",
+      "title": "Deploy devices",
+      "topic": "Build",
+      "date": "Jun 2024"
+    },
+    {
+      "id": "3.3.4",
+      "title": "Deploy and cable devices",
+      "topic": "Build",
+      "date": "Jun 2024"
+    },
+    {
+      "id": "3.4.3",
+      "title": "Configure end devices",
+      "topic": "Build",
+      "date": "Jun 2024"
+    },
+    {
+      "id": "3.5.1",
+      "title": "Create a simple network",
+      "topic": "Build",
+      "date": "Jun 2024"
+    },
+    {
+      "id": "9.2.5",
+      "title": "Configure DHCP on a wireless router",
+      "topic": "Services",
+      "date": "Jul 2024"
+    },
+    {
+      "id": "12.4.4",
+      "title": "Use FTP services",
+      "topic": "Services",
+      "date": "Jul 2024"
+    }
+  ]
+}

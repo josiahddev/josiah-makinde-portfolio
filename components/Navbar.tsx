@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import { contact, nav } from "@/lib/data";
+import { contact, nav, site } from "@/lib/content";
 import { useActiveSection } from "./useActiveSection";
 
 const ids = nav.map((n) => n.id);
@@ -53,10 +53,12 @@ export function Navbar() {
             className="group flex items-baseline gap-2 font-display font-semibold tracking-tight"
             onClick={() => setOpen(false)}
           >
-            Josiah Makinde
-            <span className="hidden font-mono text-[0.6875rem] font-normal text-faint transition-colors group-hover:text-accent sm:inline">
-              ~/it/systems/security
-            </span>
+            {site.name}
+            {site.brandTag && (
+              <span className="hidden font-mono text-[0.6875rem] font-normal text-faint transition-colors group-hover:text-accent sm:inline">
+                {site.brandTag}
+              </span>
+            )}
           </a>
 
           <ul className="hidden items-center lg:flex">
@@ -159,20 +161,20 @@ function MobileMenu({ active, onNavigate }: { active: string; onNavigate: () => 
 
 function CvLink({ className = "" }: { className?: string }) {
   const base = "min-h-10 items-center justify-center gap-2 rounded-[3px] border px-4 text-sm font-medium";
-  if (!contact.cv.available) {
+  if (!contact.cv.available || !contact.cv.file) {
     return (
-      <span className={`${base} cursor-not-allowed border-line text-faint ${className}`} title="CV upload pending">
-        CV pending
+      <span className={`${base} cursor-not-allowed border-line text-faint ${className}`} title={contact.labels.cvPending}>
+        {site.cvPending}
       </span>
     );
   }
   return (
     <a
-      href={contact.cv.href}
+      href={contact.cv.file}
       download
       className={`${base} border-line-strong transition-colors hover:border-accent hover:text-accent ${className}`}
     >
-      Download CV{" "}
+      {site.cvButton}{" "}
       <span aria-hidden="true" className="font-mono text-xs">
         ↓
       </span>

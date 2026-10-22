@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { ProjectImage } from "@/lib/data";
+import { projects, type ProjectImage } from "@/lib/content";
 
 type Props = { images: ProjectImage[]; title: string };
 
@@ -89,7 +89,7 @@ export function ProjectGallery({ images, title }: Props) {
       {images.length > 1 && (
         <ul className="mt-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:thin]" aria-label={`${title} screenshots`}>
           {images.map((img, i) => (
-            <li key={img.src} className="shrink-0">
+            <li key={i} className="shrink-0">
               <button
                 type="button"
                 onClick={() => setIndex(i)}
@@ -168,7 +168,7 @@ export function ScreenshotPlaceholder() {
       <span aria-hidden="true" className="font-mono text-lg text-faint">
         [ ]
       </span>
-      <p className="font-mono text-xs text-muted">Project screenshots coming soon</p>
+      <p className="font-mono text-xs text-muted">{projects.labels.screenshotsPending}</p>
     </div>
   );
 }

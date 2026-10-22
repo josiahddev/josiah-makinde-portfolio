@@ -2,12 +2,12 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import type { Project } from "@/lib/data";
+import { projectImages, projects, type Project } from "@/lib/content";
 import { ProjectGallery } from "./ProjectGallery";
 import { StatusBadge } from "./StatusBadge";
 import { GitHubIcon } from "./ui/icons";
 
-const PENDING = "More details coming soon.";
+const L = projects.labels;
 
 /** Compact, expandable row for the non-featured projects. */
 export function ProjectCard({ project }: { project: Project }) {
@@ -31,7 +31,7 @@ export function ProjectCard({ project }: { project: Project }) {
             <span className="block font-display text-xl font-semibold tracking-tight transition-transform duration-300 group-hover:translate-x-1 sm:text-2xl">
               {project.title}
             </span>
-            <span className="mt-1 block text-sm text-muted">{project.stack.join(" · ")}</span>
+            {project.stack.length > 0 && <span className="mt-1 block text-sm text-muted">{project.stack.join(" · ")}</span>}
           </span>
           <span className="flex items-center gap-4">
             <span className="hidden sm:inline">
@@ -64,12 +64,12 @@ export function ProjectCard({ project }: { project: Project }) {
               <div className="min-w-0">
                 <p className="text-pretty text-muted">{project.summary}</p>
                 <PAR project={project} />
-                {project.components && (
+                {project.components.length > 0 && (
                   <div className="mt-8">
-                    <p className="font-mono text-xs tracking-wider text-faint uppercase">Components</p>
+                    <p className="font-mono text-xs tracking-wider text-faint uppercase">{L.components}</p>
                     <ul className="mt-3 divide-y divide-line border-y border-line">
-                      {project.components.map((c) => (
-                        <li key={c.name} className="flex items-center justify-between gap-4 py-2.5 text-sm">
+                      {project.components.map((c, i) => (
+                        <li key={i} className="flex items-center justify-between gap-4 py-2.5 text-sm">
                           {c.name}
                           <StatusBadge status={c.status} />
                         </li>
@@ -80,7 +80,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 <RepoLink repo={project.repo} />
               </div>
               <div className="min-w-0">
-                <ProjectGallery images={project.images} title={project.title} />
+                <ProjectGallery images={projectImages(project)} title={project.title} />
               </div>
             </div>
           </motion.div>
@@ -93,27 +93,26 @@ export function ProjectCard({ project }: { project: Project }) {
 /** Problem → Approach → Result, with an honest placeholder for anything not written up yet. */
 export function PAR({ project }: { project: Project }) {
   const steps = [
-    { k: "Problem", v: project.problem },
-    { k: "Approach", v: project.approach },
-    { k: "Result", v: project.result },
+    { k: L.problem, v: project.problem },
+    { k: L.approach, v: project.approach },
+    { k: L.result, v: project.result },
   ];
   return (
     <dl className="mt-6 space-y-5">
       {steps.map((s, i) => (
-        <div key={s.k} className="grid gap-1.5 sm:grid-cols-[6.5rem_1fr] sm:gap-3">
+        <div key={i} className="grid gap-1.5 sm:grid-cols-[6.5rem_1fr] sm:gap-3">
           <dt className="pt-0.5 font-mono text-xs tracking-wide text-faint uppercase">
             <span className="text-accent">{i + 1}.</span> {s.k}
           </dt>
-          <dd className={`text-[0.9375rem] text-pretty ${s.v ? "text-fg/90" : "text-faint italic"}`}>{s.v ?? PENDING}</dd>
+          <dd className={`text-[0.9375rem] text-pretty ${s.v ? "text-fg/90" : "text-faint italic"}`}>{s.v || L.pending}</dd>
         </div>
       ))}
     </dl>
   );
 }
 
-export function RepoLink({ repo }: { repo: string | null }) {
-  if (!repo)
-    return <p className="mt-8 font-mono text-xs text-faint">GitHub link coming soon</p>;
+export function RepoLink({ repo }: { repo: string }) {
+  if (!repo) return L.repoPending ? <p className="mt-8 font-mono text-xs text-faint">{L.repoPending}</p> : null;
   return (
     <a
       href={repo}
@@ -122,7 +121,7 @@ export function RepoLink({ repo }: { repo: string | null }) {
       className="group mt-8 inline-flex min-h-11 items-center gap-2.5 text-sm text-fg underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-accent"
     >
       <GitHubIcon className="size-4" />
-      View the code on GitHub
+      {L.repoLink}
       <span aria-hidden="true" className="font-mono text-xs transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
         ↗
       </span>

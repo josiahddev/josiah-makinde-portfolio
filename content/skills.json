@@ -1,0 +1,117 @@
+{
+  "label": "Skills",
+  "title": "Labelled honestly.",
+  "lede": "No percentage bars. Each group says whether I use it at work, know it well enough to get by, or am still learning it.",
+  "levels": {
+    "daily": "Use at work",
+    "working": "Working knowledge",
+    "learning": "Currently learning"
+  },
+  "expandAll": "[ expand all ]",
+  "collapseAll": "[ collapse all ]",
+  "groups": [
+    {
+      "name": "IT Support",
+      "level": "daily",
+      "summary": "The core of my job.",
+      "items": [
+        "Windows",
+        "PC troubleshooting",
+        "Hardware troubleshooting",
+        "Software troubleshooting",
+        "Printer support",
+        "Microsoft Office",
+        "User support",
+        "IT asset management",
+        "Installation & configuration",
+        "System maintenance",
+        "Incident documentation & escalation"
+      ]
+    },
+    {
+      "name": "Networking",
+      "level": "working",
+      "summary": "Comfortable troubleshooting; still going deeper.",
+      "items": [
+        "TCP/IP fundamentals",
+        "IP addressing",
+        "DHCP",
+        "DNS fundamentals",
+        "LAN / WAN",
+        "Network devices",
+        "Connectivity troubleshooting",
+        "Cisco Packet Tracer"
+      ]
+    },
+    {
+      "name": "Systems",
+      "level": "working",
+      "summary": "Windows day to day, Linux on the command line.",
+      "items": [
+        "Windows",
+        "Basic Linux CLI",
+        "User accounts",
+        "Backups",
+        "Basic system administration"
+      ]
+    },
+    {
+      "name": "Microsoft ecosystem",
+      "level": "learning",
+      "summary": "Fundamentals, building toward admin work.",
+      "items": [
+        "Microsoft 365",
+        "Microsoft Entra ID",
+        "Active Directory"
+      ]
+    },
+    {
+      "name": "Tools & languages",
+      "level": "working",
+      "summary": "What I script and build with.",
+      "items": [
+        "PowerShell",
+        "Python",
+        "C",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Git",
+        "GitHub",
+        "Jira"
+      ]
+    },
+    {
+      "name": "UI/UX design",
+      "level": "working",
+      "summary": "Six solo case studies in Figma — see the Design section.",
+      "items": [
+        "Figma",
+        "Wireframing",
+        "Style guides",
+        "Component libraries",
+        "High-fidelity screens",
+        "Landing pages",
+        "Booking flows"
+      ]
+    },
+    {
+      "name": "Cybersecurity",
+      "level": "learning",
+      "summary": "Studying the concepts, practising in labs, applying the basics at work.",
+      "items": [
+        "Security fundamentals",
+        "Security monitoring concepts",
+        "SIEM concepts",
+        "Vulnerability management concepts",
+        "Network security fundamentals",
+        "Windows security fundamentals",
+        "Cloud security fundamentals",
+        "Vulnerability assessment (lab)",
+        "Nmap",
+        "Metasploit (lab)",
+        "Kali Linux"
+      ]
+    }
+  ]
+}

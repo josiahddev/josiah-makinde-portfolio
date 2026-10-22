@@ -1,0 +1,82 @@
+{
+  "label": "Learning",
+  "title": "Where I'm heading, one layer at a time.",
+  "lede": "Security sits on top of networking and systems, so that's the order I'm learning them in. No percentages — just what's covered, what I'm on now, and what's next.",
+  "stepLabels": {
+    "done": "Covered",
+    "current": "Now",
+    "next": "Next"
+  },
+  "tracks": [
+    {
+      "name": "Networking",
+      "why": "A lot of “the computer is broken” tickets turn out to be the network.",
+      "steps": [
+        {
+          "label": "TCP/IP",
+          "state": "done"
+        },
+        {
+          "label": "DNS / DHCP",
+          "state": "done"
+        },
+        {
+          "label": "Troubleshooting",
+          "state": "current"
+        },
+        {
+          "label": "Network security",
+          "state": "next"
+        }
+      ]
+    },
+    {
+      "name": "Systems",
+      "why": "Moving from fixing single machines to managing them properly.",
+      "steps": [
+        {
+          "label": "Windows",
+          "state": "done"
+        },
+        {
+          "label": "Linux",
+          "state": "current"
+        },
+        {
+          "label": "Active Directory",
+          "state": "current"
+        },
+        {
+          "label": "Microsoft 365",
+          "state": "current"
+        },
+        {
+          "label": "Entra ID",
+          "state": "next"
+        }
+      ]
+    },
+    {
+      "name": "Security",
+      "why": "Where I'm headed — built on the two tracks above, not instead of them.",
+      "steps": [
+        {
+          "label": "Fundamentals",
+          "state": "done"
+        },
+        {
+          "label": "SIEM",
+          "state": "current"
+        },
+        {
+          "label": "Vulnerability management",
+          "state": "current"
+        },
+        {
+          "label": "Security engineering",
+          "state": "next"
+        }
+      ]
+    }
+  ]
+}

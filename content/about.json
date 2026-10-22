@@ -1,0 +1,44 @@
+{
+  "label": "About",
+  "heading": "I like finding out *why* something broke — then making sure it doesn’t break that way again.",
+  "photo": "/images/josiah.webp",
+  "photoAlt": "Portrait of Josiah Makinde, smiling, wearing clear-framed glasses and a white T-shirt",
+  "captionLeft": "josiah makinde",
+  "captionRight": "kaduna, ng",
+  "paragraphs": [
+    {
+      "text": "I studied Computer Science, but most of what I know about computers I learned by fixing them for other people. My first IT role was an internship at Peugeot Automobile Nigeria; since then I’ve supported staff at the Armed Forces Command and Staff College during NYSC, and I now look after IT for a chartered accountancy firm — the machines, the network, the accounts, the backups and the people using all of it.",
+      "highlight": false
+    },
+    {
+      "text": "That work is what pulled me toward security. When you’re the person who sets up user access, runs the backups and configures the antivirus, you start asking what would happen if those things failed. So I’m deliberately going deeper into networking, systems administration and security — through Cisco coursework, Security+ training, a group vulnerability assessment in a lab, and small tools I build to practise.",
+      "highlight": false
+    },
+    {
+      "text": "I don’t know everything, and I won’t pretend to. What I do have is real time with real users, and the habit of learning whatever the next problem needs.",
+      "highlight": true
+    }
+  ],
+  "facts": [
+    {
+      "label": "Studied",
+      "value": "B.Sc. Computer Science, Mountain Top University (2022)"
+    },
+    {
+      "label": "Working in",
+      "value": "IT support since 2021 — automotive, military college, accountancy"
+    },
+    {
+      "label": "Good at",
+      "value": "Staying calm with a frustrated user and a machine that won't boot"
+    },
+    {
+      "label": "On the side",
+      "value": "UI/UX design in Figma — six case studies"
+    },
+    {
+      "label": "Heading toward",
+      "value": "Network administration and cybersecurity"
+    }
+  ]
+}

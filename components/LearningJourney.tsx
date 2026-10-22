@@ -2,7 +2,10 @@
 
 import { motion } from "motion/react";
 import { useRef, useState } from "react";
-import { learningTracks, stepStateLabel, type StepState } from "@/lib/data";
+import { learning, type StepState } from "@/lib/content";
+
+const learningTracks = learning.tracks;
+const stepStateLabel = learning.stepLabels;
 import { SectionHeading } from "./ui/SectionHeading";
 
 const nodeStyle: Record<StepState, string> = {
@@ -31,16 +34,17 @@ export function LearningJourney({ children }: { children?: React.ReactNode }) {
         <SectionHeading
           id="learning-title"
           index="07"
-          label="Learning"
-          title="Where I'm heading, one layer at a time."
-          lede="Security sits on top of networking and systems, so that's the order I'm learning them in. No percentages — just what's covered, what I'm on now, and what's next."
+          label={learning.label}
+          title={learning.title}
+          lede={learning.lede}
         />
 
+        {track && (
         <div className="mt-14">
           <div role="tablist" aria-label="Learning tracks" className="flex gap-1 border-b border-line" onKeyDown={onKeyDown}>
             {learningTracks.map((t, i) => (
               <button
-                key={t.name}
+                key={i}
                 ref={(el) => {
                   tabs.current[i] = el;
                 }}
@@ -75,12 +79,12 @@ export function LearningJourney({ children }: { children?: React.ReactNode }) {
             tabIndex={0}
             className="pt-10 focus-visible:outline-offset-8"
           >
-            <p className="max-w-xl text-muted">{track.why}</p>
+            {track.why && <p className="max-w-xl text-muted">{track.why}</p>}
 
-            <ol key={track.name} className="relative mt-10 grid gap-0 md:grid-flow-col md:auto-cols-fr">
+            <ol key={active} className="relative mt-10 grid gap-0 md:grid-flow-col md:auto-cols-fr">
               {track.steps.map((step, i) => (
                 <motion.li
-                  key={step.label}
+                  key={i}
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.07, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -116,6 +120,7 @@ export function LearningJourney({ children }: { children?: React.ReactNode }) {
             </ol>
           </div>
         </div>
+        )}
 
         {children}
       </div>

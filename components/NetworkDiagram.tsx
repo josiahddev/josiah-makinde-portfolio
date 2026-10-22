@@ -1,20 +1,23 @@
 "use client";
 
 import { motion } from "motion/react";
+import { handsOn } from "@/lib/content";
 
 type Node = { id: string; x: number; y: number; label: string; sub: string; accent?: boolean };
+
+const d = handsOn.diagram;
 
 const W = 150;
 const H = 46;
 
 const nodes: Node[] = [
-  { id: "ups", x: 10, y: 10, label: "Power / UPS", sub: "keeps it all up" },
-  { id: "srv", x: 200, y: 10, label: "Servers", sub: "Windows" },
-  { id: "sw", x: 105, y: 118, label: "Network switches", sub: "LAN core", accent: true },
-  { id: "ap", x: 10, y: 226, label: "Wireless APs", sub: "Wi-Fi" },
-  { id: "lan", x: 200, y: 226, label: "Wired LAN", sub: "cabled rooms" },
-  { id: "lap", x: 10, y: 334, label: "80+ HP ProBooks", sub: "student laptops" },
-  { id: "cbt", x: 200, y: 334, label: "CBT systems", sub: "Windows PCs" },
+  { id: "ups", x: 10, y: 10, ...d.power },
+  { id: "srv", x: 200, y: 10, ...d.servers },
+  { id: "sw", x: 105, y: 118, ...d.switches, accent: true },
+  { id: "ap", x: 10, y: 226, ...d.wireless },
+  { id: "lan", x: 200, y: 226, ...d.wired },
+  { id: "lap", x: 10, y: 334, ...d.laptops },
+  { id: "cbt", x: 200, y: 334, ...d.testing },
 ];
 
 const byId = Object.fromEntries(nodes.map((n) => [n.id, n]));
@@ -46,10 +49,9 @@ export function NetworkDiagram() {
       aria-labelledby="net-title net-desc"
       className="h-auto w-full font-mono"
     >
-      <title id="net-title">School ICT environment</title>
+      <title id="net-title">{handsOn.fieldNotes.title}</title>
       <desc id="net-desc">
-        Simplified sketch: power and UPS, servers, network switches, wireless access points serving over 80 HP ProBook
-        laptops, and a wired LAN serving computer-based testing systems on Windows PCs.
+        {`Simplified sketch: ${d.power.label} and ${d.servers.label} connect to ${d.switches.label}, which feed ${d.wireless.label} serving ${d.laptops.label}, and ${d.wired.label} serving ${d.testing.label}.`}
       </desc>
 
       {links.map(([from, to, style], i) => (

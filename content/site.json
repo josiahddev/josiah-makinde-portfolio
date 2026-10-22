@@ -1,0 +1,59 @@
+{
+  "url": "https://josiah-makinde-portfolio.vercel.app",
+  "name": "Josiah Makinde",
+  "fullName": "Makinde Ifeoluwa Josiah",
+  "title": "Josiah Makinde — IT Support & Cybersecurity",
+  "description": "IT support and ICT professional in Kaduna, Nigeria. Hands-on with Windows, hardware, networks and users — and deliberately building toward cybersecurity.",
+  "location": "Kaduna, Nigeria",
+  "jobTitle": "ICT Manager",
+  "worksFor": "Chris Makinde & Co Chartered Accountants",
+  "alumniOf": "Mountain Top University",
+  "brandTag": "~/it/systems/security",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "design": "Design",
+    "learning": "Learning",
+    "contact": "Contact"
+  },
+  "cvButton": "Download CV",
+  "cvPending": "CV pending",
+  "og": {
+    "kicker": "IT / SYSTEMS / SECURITY",
+    "tagline": "IT Support & ICT — building toward cybersecurity.",
+    "footer": "Kaduna, Nigeria"
+  },
+  "footer": {
+    "tagline": "IT Support · ICT · Cybersecurity",
+    "note": "Built with care in Kaduna.",
+    "terminal": [
+      {
+        "text": "$ whoami",
+        "tone": "command"
+      },
+      {
+        "text": "josiah",
+        "tone": "output"
+      },
+      {
+        "text": "$ status",
+        "tone": "command"
+      },
+      {
+        "text": "learning...",
+        "tone": "output"
+      },
+      {
+        "text": "building...",
+        "tone": "output"
+      },
+      {
+        "text": "debugging...",
+        "tone": "accent"
+      }
+    ]
+  }
+}

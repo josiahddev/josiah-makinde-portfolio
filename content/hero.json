@@ -1,0 +1,87 @@
+{
+  "statusLabel": "Currently building",
+  "statusValue": "IT Support + Cybersecurity",
+  "headline": [
+    "IT Support.",
+    "Systems."
+  ],
+  "headlineAccent": "Security.",
+  "annotation": "← in progress",
+  "intro": "I work with technology from the practical side — supporting users, troubleshooting systems, keeping a small office network honest — and I’m building, step by step, toward a career in cybersecurity.",
+  "primaryCta": "View my work",
+  "secondaryCta": "Let’s connect",
+  "facts": [
+    {
+      "label": "Now",
+      "value": "ICT Manager, Chris Makinde & Co"
+    },
+    {
+      "label": "Degree",
+      "value": "B.Sc. Computer Science"
+    },
+    {
+      "label": "Based",
+      "value": "Kaduna, Nigeria"
+    }
+  ],
+  "console": {
+    "windowTitle": "pwsh",
+    "prompt": "josiah@kaduna:~$",
+    "summary": "Terminal summary: Josiah works in IT support and ICT. Focus areas are Windows, networking, scripting and security fundamentals. Status: learning and building.",
+    "lines": [
+      {
+        "kind": "cmd",
+        "text": "whoami",
+        "accent": false
+      },
+      {
+        "kind": "out",
+        "text": "josiah — IT support / ICT",
+        "accent": false
+      },
+      {
+        "kind": "gap",
+        "accent": false
+      },
+      {
+        "kind": "cmd",
+        "text": "cat ./focus",
+        "accent": false
+      },
+      {
+        "kind": "out",
+        "text": "windows      users & endpoints",
+        "accent": false
+      },
+      {
+        "kind": "out",
+        "text": "networking   ip · dhcp · lan/wan",
+        "accent": false
+      },
+      {
+        "kind": "out",
+        "text": "scripting    powershell · python",
+        "accent": false
+      },
+      {
+        "kind": "out",
+        "text": "security     fundamentals → siem",
+        "accent": true
+      },
+      {
+        "kind": "gap",
+        "accent": false
+      },
+      {
+        "kind": "cmd",
+        "text": "status",
+        "accent": false
+      },
+      {
+        "kind": "out",
+        "text": "learning + building",
+        "accent": true
+      }
+    ]
+  }
+}

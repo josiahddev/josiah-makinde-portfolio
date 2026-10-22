@@ -1,0 +1,94 @@
+{
+  "show": true,
+  "tag": "Security",
+  "kicker": "Vulnerability assessment · Group project · Jul 2026",
+  "title": "Securing legacy systems at “Apex Healthcare”",
+  "summary": "We scanned both systems, matched what was running against known vulnerabilities, rated each finding by likelihood and impact, and wrote up the controls and policies a healthcare organisation would need — with HIPAA in mind.",
+  "scenarioLabel": "Lab scenario",
+  "scenario": "Apex Healthcare Solutions is a fictional client. The targets were Kioptrix and Metasploitable 2 — deliberately vulnerable machines built for security training — scanned inside an isolated lab.",
+  "findingsLabel": "Findings",
+  "teamLabel": "Team",
+  "team": "Team of 8 — I prepared the final report",
+  "findings": [
+    {
+      "system": "Kioptrix",
+      "name": "Samba 2.2.1 buffer overflow",
+      "service": "SMB · 445",
+      "likelihood": "High",
+      "impact": "High",
+      "risk": "High",
+      "control": "Patch / upgrade Samba"
+    },
+    {
+      "system": "Kioptrix",
+      "name": "Apache mod_ssl overflow",
+      "service": "HTTPS · 443",
+      "likelihood": "Medium",
+      "impact": "High",
+      "risk": "High",
+      "control": "Patch + segment web servers"
+    },
+    {
+      "system": "Kioptrix",
+      "name": "Weak MySQL credentials",
+      "service": "MySQL · 3306",
+      "likelihood": "High",
+      "impact": "Medium",
+      "risk": "Medium",
+      "control": "Strong passwords + restrict network access"
+    },
+    {
+      "system": "Metasploitable 2",
+      "name": "vsftpd 2.3.4 backdoor",
+      "service": "FTP · 21",
+      "likelihood": "High",
+      "impact": "High",
+      "risk": "High",
+      "control": "Replace vsftpd with a verified version"
+    },
+    {
+      "system": "Metasploitable 2",
+      "name": "Telnet enabled",
+      "service": "Telnet · 23",
+      "likelihood": "High",
+      "impact": "Medium",
+      "risk": "High",
+      "control": "Disable Telnet, use SSH"
+    },
+    {
+      "system": "Metasploitable 2",
+      "name": "Outdated Apache 2.2.8",
+      "service": "HTTP · 80",
+      "likelihood": "Medium",
+      "impact": "Medium",
+      "risk": "Medium",
+      "control": "Upgrade Apache"
+    }
+  ],
+  "policiesLabel": "Policies we recommended",
+  "policies": [
+    "Patch & end-of-life software management",
+    "Secure configuration & hardening",
+    "Access control & credential management",
+    "Vulnerability assessment & continuous monitoring"
+  ],
+  "takeawayLabel": "What stuck with me",
+  "takeaway": "None of it needed a redesign. Every finding traced back to basics: software nobody patched, services nobody should still be running, and passwords nobody changed.",
+  "tools": [
+    "Kali Linux",
+    "Nmap",
+    "Searchsploit",
+    "Metasploit"
+  ],
+  "footnote": "Clear scan screenshots coming soon",
+  "labels": {
+    "finding": "Finding",
+    "service": "Service",
+    "likelihood": "Likelihood",
+    "impact": "Impact",
+    "risk": "Risk",
+    "control": "Recommended control",
+    "fix": "Fix:",
+    "findingsSummary": "{count} across {systems} systems · {high} rated High"
+  }
+}

@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { contact } from "@/lib/data";
+import { contact } from "@/lib/content";
+
+const F = contact.form;
 
 type Field = "name" | "email" | "subject" | "message";
 type Values = Record<Field, string>;
@@ -67,21 +69,21 @@ export function ContactForm() {
   return (
     <form noValidate onSubmit={onSubmit} className="space-y-6" aria-describedby="cf-note">
       <div className="grid gap-6 sm:grid-cols-2">
-        <Input id="name" label="Name" autoComplete="name" value={values.name} onChange={update("name")} onBlur={blur("name")} error={shown("name")} />
-        <Input id="email" label="Email" type="email" autoComplete="email" inputMode="email" value={values.email} onChange={update("email")} onBlur={blur("email")} error={shown("email")} />
+        <Input id="name" label={F.name} autoComplete="name" value={values.name} onChange={update("name")} onBlur={blur("name")} error={shown("name")} />
+        <Input id="email" label={F.email} type="email" autoComplete="email" inputMode="email" value={values.email} onChange={update("email")} onBlur={blur("email")} error={shown("email")} />
       </div>
-      <Input id="subject" label="Subject" value={values.subject} onChange={update("subject")} onBlur={blur("subject")} error={shown("subject")} />
-      <Input id="message" label="Message" multiline value={values.message} onChange={update("message")} onBlur={blur("message")} error={shown("message")} />
+      <Input id="subject" label={F.subject} value={values.subject} onChange={update("subject")} onBlur={blur("subject")} error={shown("subject")} />
+      <Input id="message" label={F.message} multiline value={values.message} onChange={update("message")} onBlur={blur("message")} error={shown("message")} />
 
       <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
         <p id="cf-note" className="max-w-sm font-mono text-[0.6875rem] leading-5 text-faint">
-          No server here — sending opens your email app with the message ready to go.
+          {F.note}
         </p>
         <button
           type="submit"
           className="group inline-flex min-h-11 shrink-0 items-center whitespace-nowrap justify-center gap-2 rounded-[3px] bg-fg px-6 text-[0.9375rem] font-medium text-bg transition-colors hover:bg-accent active:translate-y-px"
         >
-          Send message
+          {F.button}
           <span aria-hidden="true" className="font-mono text-xs transition-transform group-hover:translate-x-0.5">
             →
           </span>
@@ -91,7 +93,7 @@ export function ContactForm() {
       <p role="status" aria-live="polite" className="text-sm text-muted empty:hidden">
         {handedOff && (
           <>
-            Your email app should have opened with the message filled in. If it didn&rsquo;t, write to me directly at{" "}
+            {F.success}{" "}
             <a href={`mailto:${contact.email}`} className="text-fg underline decoration-accent underline-offset-4">
               {contact.email}
             </a>

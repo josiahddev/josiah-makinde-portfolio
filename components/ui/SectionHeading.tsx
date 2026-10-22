@@ -1,10 +1,10 @@
-import type { ReactNode } from "react";
+import { Emphasis } from "./Emphasis";
 
 type Props = {
   index: string;
   label: string;
-  title: ReactNode;
-  lede?: ReactNode;
+  title: string;
+  lede?: string;
   id?: string;
 };
 
@@ -18,7 +18,7 @@ export function SectionHeading({ index, label, title, lede, id }: Props) {
         {label}
       </p>
       <h2 id={id} className="mt-5 font-display text-[clamp(1.875rem,4.2vw,2.75rem)] leading-[1.08] font-semibold tracking-[-0.025em] text-balance">
-        {title}
+        <Emphasis text={title} />
       </h2>
       {lede && <p className="mt-4 max-w-xl text-pretty text-muted">{lede}</p>}
     </header>

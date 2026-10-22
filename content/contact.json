@@ -1,0 +1,38 @@
+{
+  "email": "josiahchrismakinde@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/josiah-makinde-2a55011b7",
+  "linkedinLabel": "josiah-makinde",
+  "github": "https://github.com/josiahddev",
+  "githubHandle": "josiahddev",
+  "credly": "https://www.credly.com/users/ifeoluwa-makinde.c08160c9",
+  "cv": {
+    "file": "/cv/Josiah-Makinde-CV.pdf",
+    "available": true
+  },
+  "label": "Contact",
+  "title": "Let's talk.",
+  "lede": "Hiring for IT support, systems or junior security work — or just want to compare notes on a PowerShell script? I'd like to hear from you.",
+  "labels": {
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "badges": "Badges",
+    "badgesValue": "Credly",
+    "location": "Location",
+    "cv": "CV",
+    "cvDownload": "Download PDF ↓",
+    "cvView": "View in browser ↗",
+    "cvPending": "CV upload pending"
+  },
+  "form": {
+    "title": "Send a message",
+    "subtitle": "Goes straight to my inbox.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "note": "No server here — sending opens your email app with the message ready to go.",
+    "button": "Send message",
+    "success": "Your email app should have opened with the message filled in. If it didn’t, write to me directly at"
+  }
+}

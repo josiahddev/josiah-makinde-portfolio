@@ -1,0 +1,98 @@
+{
+  "label": "Hands-on",
+  "title": "What I've actually worked with.",
+  "lede": "Not a list of buzzwords — the kinds of problems that land on my desk, and the kit I've had my hands on.",
+  "areas": [
+    {
+      "area": "Windows support",
+      "detail": "Slow machines, broken updates, apps that won't open, profiles that won't load. Most of my working day starts here.",
+      "tags": [
+        "Windows 10/11",
+        "Microsoft Office",
+        "User profiles"
+      ]
+    },
+    {
+      "area": "Hardware",
+      "detail": "Desktops, laptops, printers and peripherals — unboxing, setting up, diagnosing and keeping them running.",
+      "tags": [
+        "PCs & laptops",
+        "Printers",
+        "Peripherals"
+      ]
+    },
+    {
+      "area": "Networking",
+      "detail": "The practical end: IP addressing, DHCP, LAN/WAN, and working out why one machine can't see the printer everyone else can.",
+      "tags": [
+        "IP / DHCP",
+        "LAN / WAN",
+        "Connectivity"
+      ]
+    },
+    {
+      "area": "Accounts, access & backups",
+      "detail": "Creating and removing user accounts, keeping access sensible, and making sure there's a backup before anyone needs one.",
+      "tags": [
+        "User accounts",
+        "Access control",
+        "Backups"
+      ]
+    },
+    {
+      "area": "Security basics at work",
+      "detail": "Antivirus and firewall configuration, security awareness with staff, and treating data like it belongs to a client — because at an accounting firm it does.",
+      "tags": [
+        "Antivirus",
+        "Firewall",
+        "Awareness"
+      ]
+    }
+  ],
+  "fieldNotes": {
+    "kicker": "Field notes",
+    "title": "A school ICT environment",
+    "text": "I’ve worked in and around a setup like this — supporting and maintaining it day to day. I didn’t design it; I learned a lot keeping it running.",
+    "caption": "sketch — simplified, not a network design"
+  },
+  "diagram": {
+    "power": {
+      "label": "Power / UPS",
+      "sub": "keeps it all up"
+    },
+    "servers": {
+      "label": "Servers",
+      "sub": "Windows"
+    },
+    "switches": {
+      "label": "Network switches",
+      "sub": "LAN core"
+    },
+    "wireless": {
+      "label": "Wireless APs",
+      "sub": "Wi-Fi"
+    },
+    "wired": {
+      "label": "Wired LAN",
+      "sub": "cabled rooms"
+    },
+    "laptops": {
+      "label": "80+ HP ProBooks",
+      "sub": "student laptops"
+    },
+    "testing": {
+      "label": "CBT systems",
+      "sub": "Windows PCs"
+    }
+  },
+  "environment": [
+    "80+ HP ProBook laptops",
+    "Network switches",
+    "Wireless access points",
+    "LAN cabling",
+    "CBT (computer-based testing) systems",
+    "Windows machines",
+    "Servers",
+    "Power / UPS"
+  ]
+}

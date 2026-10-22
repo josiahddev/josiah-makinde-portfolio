@@ -1,4 +1,4 @@
-import type { ProjectStatus } from "@/lib/data";
+import type { ProjectStatus } from "@/lib/content";
 import { Badge } from "./ui/Badge";
 
 const tone: Record<ProjectStatus, "accent" | "neutral" | "solid"> = {

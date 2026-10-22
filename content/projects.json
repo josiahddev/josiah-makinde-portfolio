@@ -1,0 +1,165 @@
+{
+  "label": "Projects",
+  "title": "Built, tested, written up.",
+  "lede": "Lab work and personal projects, not commercial products — a group security assessment, the small tools I build to learn, and the networking labs behind them.",
+  "labels": {
+    "featured": "Featured",
+    "components": "Components",
+    "problem": "Problem",
+    "approach": "Approach",
+    "result": "Result",
+    "pending": "More details coming soon.",
+    "repoLink": "View the code on GitHub",
+    "repoPending": "GitHub link coming soon",
+    "screenshotsPending": "Project screenshots coming soon"
+  },
+  "items": [
+    {
+      "title": "Windows System Health Checker",
+      "summary": "A PowerShell script that gives a first-pass diagnostic of a Windows PC in one run — instead of opening Task Manager, Settings and a command prompt one after another.",
+      "stack": [
+        "PowerShell",
+        "CIM / WMI",
+        "Test-Connection",
+        "Get-HotFix"
+      ],
+      "status": "Working",
+      "repo": "https://github.com/josiahddev/windows-system-health-checker",
+      "problem": "When someone says “my computer is slow”, the first ten minutes are always the same: uptime, memory, disk space, CPU, network, last update. Checked one by one, by hand.",
+      "approach": "Pull the data straight from Windows through CIM/WMI classes (Win32_OperatingSystem, Win32_LogicalDisk, Win32_Processor), convert kilobytes and bytes into readable GB, then finish with a summary that flags what actually needs attention — low RAM, no internet.",
+      "result": "One command, one readable report. Along the way I hit an encoding bug that broke the parser with a confusing error — which taught me to be careful with characters in PowerShell scripts.",
+      "images": [
+        {
+          "upload": null,
+          "url": "https://raw.githubusercontent.com/josiahddev/windows-system-health-checker/HEAD/Screenshots/10-summary.png",
+          "alt": "PowerShell window with the full health check report and summary, beside the script open in VS Code",
+          "caption": "Full run — report and summary"
+        },
+        {
+          "upload": null,
+          "url": "https://raw.githubusercontent.com/josiahddev/windows-system-health-checker/HEAD/Screenshots/06-disk-space.png",
+          "alt": "Terminal output listing total, used and free space per drive",
+          "caption": "Disk space per drive"
+        },
+        {
+          "upload": null,
+          "url": "https://raw.githubusercontent.com/josiahddev/windows-system-health-checker/HEAD/Screenshots/05-ram-usage.png",
+          "alt": "Terminal output showing total, used and free RAM",
+          "caption": "RAM usage"
+        },
+        {
+          "upload": null,
+          "url": "https://raw.githubusercontent.com/josiahddev/windows-system-health-checker/HEAD/Screenshots/08-network-check.png",
+          "alt": "Terminal output confirming internet reachability",
+          "caption": "Network connectivity"
+        },
+        {
+          "upload": null,
+          "url": "https://raw.githubusercontent.com/josiahddev/windows-system-health-checker/HEAD/Screenshots/04-uptime.png",
+          "alt": "Terminal output showing system uptime in days, hours and minutes",
+          "caption": "Uptime since last reboot"
+        },
+        {
+          "upload": null,
+          "url": "https://raw.githubusercontent.com/josiahddev/windows-system-health-checker/HEAD/Screenshots/09-windows-update.png",
+          "alt": "Terminal output showing the most recently installed Windows update",
+          "caption": "Last Windows update"
+        },
+        {
+          "upload": null,
+          "url": "https://raw.githubusercontent.com/josiahddev/windows-system-health-checker/HEAD/Screenshots/07-cpu-usage.png",
+          "alt": "Terminal output showing CPU usage percentage",
+          "caption": "CPU usage"
+        },
+        {
+          "upload": null,
+          "url": "https://raw.githubusercontent.com/josiahddev/windows-system-health-checker/HEAD/Screenshots/01-computer-name.png",
+          "alt": "Terminal output showing the computer name",
+          "caption": "Computer name"
+        },
+        {
+          "upload": null,
+          "url": "https://raw.githubusercontent.com/josiahddev/windows-system-health-checker/HEAD/Screenshots/02-current-user.png",
+          "alt": "Terminal output showing the logged-in user",
+          "caption": "Current user"
+        },
+        {
+          "upload": null,
+          "url": "https://raw.githubusercontent.com/josiahddev/windows-system-health-checker/HEAD/Screenshots/03-windows-version.png",
+          "alt": "Terminal output showing the installed Windows version",
+          "caption": "Windows version"
+        }
+      ],
+      "components": []
+    },
+    {
+      "title": "Windows Troubleshooting Toolkit",
+      "summary": "A growing set of small utilities for the problems I see most at work — each one a chance to get better at PowerShell and Windows internals.",
+      "stack": [
+        "PowerShell",
+        "Windows"
+      ],
+      "status": "In progress",
+      "repo": "",
+      "problem": "The same handful of issues come up again and again: what's installed on this machine, what does the event log say, why won't the printer print, why is there no network.",
+      "approach": "",
+      "result": "",
+      "images": [],
+      "components": [
+        {
+          "name": "Software Inventory Scanner",
+          "status": "Planned"
+        },
+        {
+          "name": "Event Log Analyzer",
+          "status": "Planned"
+        },
+        {
+          "name": "Printer Diagnostic Tool",
+          "status": "Planned"
+        },
+        {
+          "name": "Network Troubleshooting",
+          "status": "Planned"
+        },
+        {
+          "name": "Windows Troubleshooting",
+          "status": "Planned"
+        }
+      ]
+    },
+    {
+      "title": "IT Support Ticket Workflow",
+      "summary": "A hands-on practice setup in Jira Service Management modelling a basic helpdesk flow — how a ticket moves from reported to resolved.",
+      "stack": [
+        "Jira Service Management",
+        "Jira"
+      ],
+      "status": "Learning project",
+      "repo": "",
+      "problem": "I document and escalate incidents at work already. I wanted to understand how a proper ticketing tool structures that same process.",
+      "approach": "Built a simple workflow with the statuses a support team actually uses: To Do → In Progress → Waiting for Customer → Resolved.",
+      "result": "",
+      "images": [],
+      "components": []
+    }
+  ],
+  "earlierLabel": "Earlier web practice",
+  "earlier": [
+    {
+      "name": "CodeCard",
+      "href": "https://github.com/josiahddev/CodeCard",
+      "note": "Static page, hosted on GitHub Pages"
+    },
+    {
+      "name": "QuickBiteRepo",
+      "href": "https://github.com/josiahddev/QuickBiteRepo",
+      "note": "HTML front-end practice — food delivery concept"
+    },
+    {
+      "name": "webapp",
+      "href": "https://github.com/josiahddev/webapp",
+      "note": "A first simple web app"
+    }
+  ]
+}

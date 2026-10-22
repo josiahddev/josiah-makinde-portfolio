@@ -2,14 +2,10 @@
 
 import { motion, useScroll, useSpring } from "motion/react";
 import { useRef, useState } from "react";
-import { nowBuilding, timeline, type TimelineEntry } from "@/lib/data";
+import { experience, type TimelineEntry } from "@/lib/content";
 import { SectionHeading } from "./ui/SectionHeading";
 
-const kindLabel: Record<TimelineEntry["kind"], string> = {
-  work: "Work",
-  education: "Education",
-  now: "Current",
-};
+const kindLabel = experience.kindLabels;
 
 export function ExperienceTimeline() {
   const listRef = useRef<HTMLOListElement>(null);
@@ -22,9 +18,9 @@ export function ExperienceTimeline() {
         <SectionHeading
           id="experience-title"
           index="02"
-          label="Experience"
-          title="Keeping other people's computers working, since 2021."
-          lede="Most recent first. Every role here has been hands-on support — the people, the machines and the network between them."
+          label={experience.label}
+          title={experience.title}
+          lede={experience.lede}
         />
 
         <ol ref={listRef} className="relative mt-16 sm:mt-20">
@@ -36,8 +32,8 @@ export function ExperienceTimeline() {
             className="absolute top-2 bottom-2 left-[5px] w-px origin-top bg-accent md:left-[11.5rem]"
           />
 
-          {timeline.map((entry) => (
-            <TimelineItem key={entry.period + entry.org} entry={entry} />
+          {experience.entries.map((entry, i) => (
+            <TimelineItem key={i} entry={entry} />
           ))}
         </ol>
       </div>
@@ -84,14 +80,14 @@ function TimelineItem({ entry }: { entry: TimelineEntry }) {
         <h3 className="mt-1 font-display text-xl font-semibold tracking-tight md:mt-0">{entry.role}</h3>
         <p className="mt-0.5 text-muted">
           {entry.org}
-          <span className="text-faint"> — {entry.place}</span>
+          {entry.place && <span className="text-faint"> — {entry.place}</span>}
         </p>
         {entry.note && <p className="mt-2 font-mono text-xs text-accent">{entry.note}</p>}
 
         {entry.points.length > 0 && (
           <ul className="mt-5 max-w-2xl space-y-2.5 text-[0.9375rem] text-muted">
-            {entry.points.map((p) => (
-              <li key={p} className="relative pl-5">
+            {entry.points.map((p, i) => (
+              <li key={i} className="relative pl-5">
                 <span aria-hidden="true" className="absolute top-[0.7em] left-0 h-px w-2.5 bg-line-strong" />
                 {p}
               </li>
@@ -99,10 +95,10 @@ function TimelineItem({ entry }: { entry: TimelineEntry }) {
           </ul>
         )}
 
-        {isNow && (
+        {isNow && experience.nowBuilding.length > 0 && (
           <ul className="mt-5 flex max-w-2xl flex-wrap gap-2" aria-label="Skills currently being built">
-            {nowBuilding.map((s) => (
-              <li key={s} className="rounded-[2px] border border-line px-2 py-1 font-mono text-xs text-muted">
+            {experience.nowBuilding.map((s, i) => (
+              <li key={i} className="rounded-[2px] border border-line px-2 py-1 font-mono text-xs text-muted">
                 {s}
               </li>
             ))}
